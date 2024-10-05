@@ -1,0 +1,15 @@
+const navbarBtn = document.querySelector(".header .fa-bars-staggered")
+
+const mobileMenyu = document.querySelector(".mobile-menyu")
+const closeIcon = document.querySelector(".fa-circle-xmark")
+
+// click dblclick mouseenter mouseleave
+// Events DOM
+navbarBtn.addEventListener("click", function() {
+    mobileMenyu.classList.add(aktiv)
+})
+
+closeIcon.addEventListener("click", function() {
+    // add remove DOM metodlaridir
+    mobileMenyu.classList.remove(aktiv)
+})

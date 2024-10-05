@@ -1,0 +1,88 @@
+/* @media (min-width: 768px) {
+    .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    
+    } */
+    
+    * {
+        text-decoration: none !important
+    }
+
+    .header {
+        padding: 20px
+    }
+
+    .header nav a {
+        color: #fff;
+
+
+    }
+
+    .mobile-menyu {
+        /* Positions - top left right bottom */
+        /* position static - arxada olan kod - dayanib yerinde */
+        /* positio: relative - elementin yerin deyishir */
+        /* positio: absolute - elementi qabaga cixarir - sehifeni asagi-yuxari edende sehifeye yapishir hereket etmir*/
+        /* positio: fixed - elementin yerin deyishir - burda ise yapishmir sehife ile birlikde yerin deyishir */
+        position: fixed;
+        top: 0px;
+        /* right: 0 */
+        /* bottom: 0 */
+
+        left: 0px;
+        background-color: rgba(0,0,0, 0.6);
+        width: 0%;
+        height: 100vh;
+        overflow-x: hidden;
+        transition: width 1.2s ease;
+    }
+
+    /* javascript vasitesile */ 
+    /* child selector */
+    .mobile-menyu.aktiv {
+           width: 100%;
+    }
+
+
+
+    .fa-circle-xmark {
+        color: #fff;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 29px;
+        color: #ccc;
+    }
+
+    .mobile-nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    
+
+    .mobile-nav-links a {
+        color: #ccc;
+        font-size: 28px;
+    }
+
+    .mobile-nav-links a:hover .fa-circle-xmark:hover {
+        color: #fff;
+    }
+
+
+
+
+    @media (min-width: 768px) {
+        .header nav{
+            display: flex;
+            gap: 20px
+        }
+
+    }
+    
