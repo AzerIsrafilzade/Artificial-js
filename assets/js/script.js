@@ -6,10 +6,10 @@ const closeIcon = document.querySelector(".fa-circle-xmark")
 // click dblclick mouseenter mouseleave
 // Events DOM
 navbarBtn.addEventListener("click", function() {
-    mobileMenyu.classList.add(aktiv)
+    mobileMenyu.classList.add("aktiv")
 })
 
 closeIcon.addEventListener("click", function() {
     // add remove DOM metodlaridir
-    mobileMenyu.classList.remove(aktiv)
+    mobileMenyu.classList.remove("aktiv")
 })
