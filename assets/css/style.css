@@ -6,6 +6,10 @@
 }
     
     } */
+
+    
+    
+
     
     * {
         text-decoration: none !important
@@ -20,6 +24,19 @@
 
 
     }
+
+    .header button {
+
+        background-color: #3A68B8;
+        color:#fff;
+        padding:15px 30px; 
+        border-color:transparent;
+        border-radius:5px;
+        display: none;
+    } 
+
+
+    
 
     .mobile-menyu {
         /* Positions - top left right bottom */
@@ -73,6 +90,31 @@
 
     .mobile-nav-links a:hover .fa-circle-xmark:hover {
         color: #fff;
+    }
+
+    /* introduction start */ 
+
+    .introduction {
+        background-color: #000;
+    }
+
+    .introduction .buttons button {
+
+        background-color: #3A68B8;
+        color:#fff;
+        padding:15px 30px; 
+        border-color:transparent;
+        border-radius:5px;
+        display: none;
+    } 
+
+    /* introduction end */
+
+
+    .shirketlerKaruseli img {
+        width: 200px;
+        height: 59px;
+
     }
 
 
