@@ -14,6 +14,7 @@ closeIcon.addEventListener("click", function() {
     mobileMenyu.classList.remove("aktiv")
 })
 
+
 // bura swiper kodlara gelecek
 //sintaksis error
 
@@ -53,7 +54,7 @@ const karusel = new Swiper(".shirketlerKaruseli", {
 // function saytaDaxilOlaniSalamla() {
 //     alert ("Welcome, dear!")
 //     }
-//     //parametrli funksiya
+
 // function salamla(ad) {
 //     alert ("Xosh geldin " + ad)
 // }
@@ -63,30 +64,134 @@ const karusel = new Swiper(".shirketlerKaruseli", {
 
 // console. log (window)
 
-window.addEventListener("load", getMehsullariGetir)
+// window.addEventListener("load", getMehsullariGetir)
 
-async function getMehsullariGetir() {
-    const unvan = "https://fakestoreapi.com/products"
+// async function getMehsullariGetir() {
+//     const unvan = "https://fakestoreapi.com/products"
 
-    try {
-        const internetdenGelenCavab = await fetch(unvan)
-        // console. log(internetdenGelenCavab)
+//     try {
+//         const internetdenGelenCavab = await fetch(unvan)
 
-        const gelenMehsullar = await internetdenGelenCavab. json()
-        console. log (gelenMehsullar)
 
-    }
+//         const gelenMehsullar = await internetdenGelenCavab. json()
+//         console. log (gelenMehsullar)
 
-    catch (xeta) {
-        console. log(xeta) 
-    }
+//     }
+
+//     catch (xeta) {
+//         console. log(xeta) 
+//     }
+
+// }
+
+
+// Awards Section start
+
+const swiper = new Swiper(".awardsSwiper", {
+  slidesPerView: 5,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 50,
+    },
+  },
+
+});
+
+
+{/*  */}
+
+const mukafatlarDivi = document.querySelector("#mukafatlar")
+
+
+// addEventListener-lerde funksiyani cagirmaq olmaz!
+window.addEventListener("load",getLocaldanMelumatlariGetir)
+
+async function getLocaldanMelumatlariGetir() {
+  const unvan = "assets/mukafatlar.json"
+
+  // geekforgeeks-de interview suallarina baxmaq olar
+
+  try {
+    const gelenCavab = await fetch (unvan)
+   
+    const mukafatlar = await gelenCavab.json()
+
+    // Array methods - arashdirib oyrenmek
+    // pop push shift unshift map filter find - arashdirib oyrenmek
+
+    // callback
+    // HOF Higher Order Function
+
+    // for(let i=0; i,mukafatlar.length; i++) {
+    //   console.log(birMukafat)
+    // } - evvel bele yazilirdi for ile, indi ashagidaki kimi forEach ile
+
+    mukafatlar.forEach(function(birMukafat) {
+      mukafatlarDivi.innerHTML += `
+      <div class="swiper-slide text-center">
+<div class="card rounded-0">
+    <img src="${birMukafat.mukafatin_shekli}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">${birMukafat.mukafat_adi}</h5>
+      <p class="card-text">${birMukafat.mukafatin_metni}</p>
+    </div>
+  </div>
+</div>
+      `
+  });
 
 }
 
+catch(err) {
+
+}
+  
+}
+
+
+// Awards Section end
+
+// Object.freeze() - arashdirib oyrenmek
+
+new Accordion('.accordion-left');
+new Accordion('.accordion-right');
 
 
 
 
 
-    //invoke
+
+
+
+// try {
+//   life = () => {
+//     learn++;
+//     believe++;
+//     love++;
+//     dream++;
+//     work++;
     
+//   };
+// } 
+// catch (doubt) {
+//   alert(`ignore doubts, be happy keep living`);
+//   life();
+// }
+// Life is good
+   

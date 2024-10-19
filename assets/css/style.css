@@ -117,6 +117,28 @@
 
     }
 
+    .awardsSwiper .swiper-slide img {
+        width: 73px;
+        height: 69px;
+        margin: 20px auto;
+        display: block;
+    }
+
+    .swiper-slide .card {
+        background-color: #0f1624;
+        color: #fff;
+    }
+
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background-color: #2C3647;
+        ;
+    }
+
+    .card-text {
+        color:#ccc;
+        font-size: 14px; 
+    }
+
 
 
 
